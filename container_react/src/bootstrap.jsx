@@ -1,11 +1,32 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import {
+	createBrowserRouter,
+	createHashRouter,
+	createRoutesFromElements,
+	Route,
+	RouterProvider,
+	Routes,
+} from 'react-router-dom';
+import { Main, Posts, Banner } from './subpages';
 
 import App from './App';
+
+const router = createHashRouter(
+	createRoutesFromElements(
+		<Route element={<App />}>
+			<Route index element={<Main />} />
+			<Route path="/posts">
+				<Route index element={<Posts />} />
+				<Route path="banner" element={<Banner />} />
+			</Route>
+		</Route>
+	)
+);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 	<React.StrictMode>
-		<App />
+		<RouterProvider router={router} />
 	</React.StrictMode>
 );
