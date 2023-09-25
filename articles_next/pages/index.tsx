@@ -11,11 +11,13 @@ import { lazy } from 'react';
 const Card = dynamic(() => import('homeApp/Card'), {
 	ssr: false,
 });
+const Banner = dynamic(() => import('posts/BannerNext'));
 
 export default function Articles() {
 	return (
 		<main>
 			<Card />
+			<Banner />
 		</main>
 	);
 }

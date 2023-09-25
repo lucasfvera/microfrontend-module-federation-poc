@@ -11,6 +11,7 @@ module.exports = {
 					name: 'articles',
 					remotes: {
 						homeApp: 'homeApp@http://localhost:3002/remoteEntry.js',
+						posts: 'posts@http://localhost:3003/_next/static/chunks/remoteEntry.js',
 					},
 					filename: 'static/chunks/remoteEntry.js',
 					exposes: {},
