@@ -12,16 +12,12 @@ module.exports = {
 					remotes: {},
 					filename: 'static/chunks/remoteEntry.js',
 					exposes: {
-						'./Posts': './pages/index.tsx',
+						'./posts': './pages/index.tsx',
+						'./BannerNext': './components/BannerNext.js',
 					},
-					shared: {
-						react: {
-							requiredVersion: false,
-							singleton: true,
-						},
-					},
+					shared: {},
 					extraOptions: {
-						skipSharingNextInternals: true,
+						exposePages: true,
 					},
 				})
 			);
