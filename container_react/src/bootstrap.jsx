@@ -2,17 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {
 	createBrowserRouter,
-	createHashRouter,
 	createRoutesFromElements,
 	Route,
 	RouterProvider,
-	Routes,
 } from 'react-router-dom';
 import { Main, Posts, Banner } from './subpages';
 
 import App from './App';
 
-const router = createHashRouter(
+const router = createBrowserRouter(
 	createRoutesFromElements(
 		<Route element={<App />}>
 			<Route index element={<Main />} />
