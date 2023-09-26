@@ -3,7 +3,7 @@ import ErrorBoundary from './ErrorBoundary';
 import { Link } from 'react-router-dom';
 
 const RemoteAppHome = lazy(() => import('home/App'));
-const RemoteAppPosts = lazy(() => import('posts/posts'));
+const RemoteAppPosts = lazy(() => import('posts/pages/index'));
 const RemoteAppPostsBanner = lazy(() => import('posts/BannerNext'));
 
 const MicroFrontEnd = ({ children }) => {
