@@ -12,7 +12,6 @@ module.exports = {
 					remotes: {},
 					filename: 'static/chunks/remoteEntry.js',
 					exposes: {
-						'./posts': './pages/index.tsx',
 						'./BannerNext': './components/BannerNext.js',
 					},
 					shared: {},
